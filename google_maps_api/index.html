@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Google Maps API</title>
+	<link rel="stylesheet" href="style.css" class="href">
+</head>
+<body>
+	<h1>Google Maps Localisation</h1>
+	<div id="map">GOOGLE MAPS</div>
+	
+	<script>
+		function initMap() {
+        var pos = {lat: 44.4226, lng: 26.1237};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: pos
+        });
+        var marker = new google.maps.Marker({
+          position: pos,
+          map: map
+        });
+      }
+
+	</script>
+	<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw2UX-VQfmSWIqHU8Dgl4Kno0LytVGOJk&callback=initMap">
+</script>
+</body>
+</html>
